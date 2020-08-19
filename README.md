@@ -1,7 +1,7 @@
 # OSCP LaTeX Report Template
 
 ## BLUF
-This document serves as a template for the real report; it provides organized presentation so you can focus on pwning boxes. Please read the \href{https://support.offensive-security.com/oscp-exam-guide/}{OSCP Exam Guide} thoroughly for the composition of your report. Good luck and try hard!
+This document serves as a template for the real report; it provides organized presentation so you can focus on pwning boxes. Please read the [https://support.offensive-security.com/oscp-exam-guide/]{OSCP Exam Guide} thoroughly for the composition of your report. Good luck and try hard!
 
 Note that details in this template have been fabricated for purposes of example. This document gives no information about the exam that is not included in the Guide.
 

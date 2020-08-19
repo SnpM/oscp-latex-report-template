@@ -5,7 +5,7 @@ This document serves as a template for the real report; it provides organized pr
 
 Note that details in this template have been fabricated for purposes of example. This document gives no information about the exam that is not included in the Guide.
 
-Check out ./maindocument.pdf to see out what this template looks like.
+Check out ./maindocument.pdf to see what this template looks like.
 
 ## Guide
 

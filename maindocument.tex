@@ -1,0 +1,110 @@
+\documentclass[a4paper, 10pt, oneside]{article}
+\renewcommand{\familydefault}{\sfdefault}
+%---------------------------------------------------------------------------------
+%------------------------- Set the variables for the Mainpage here ---------------
+%---------------------------------------------------------------------------------
+\newcommand{\name}{Your Name}
+\newcommand{\email}{your.email@domain.tld}
+\newcommand{\osid}{OS-XXXXX}
+
+%---------------------------------------------------------------------------------
+%------------------------- Include the list of used packages ---------------------
+%---------------------------------------------------------------------------------
+\input{packages.tex}
+\input{custompackages.tex}
+
+%---------------------------------------------------------------------------------
+%------------------------- Create title page -------------------------------------
+%---------------------------------------------------------------------------------
+\title{{\textbf{\Huge Offensive Security}}\\Penetration Test Report for\\OSCP Exam}
+\author{\vspace{.8cm}\\{\LARGE \name}\\[1em]\email\\[1em]OSID: \osid}
+\date{\vspace{1cm}\includegraphics{offsec_logo.png}\\\vspace{2cm} \today\\ \vspace{.25cm} \textcopyright\\\vspace{.25cm}
+{\small All rights reserved to Offensive Security, 2020\\
+No part of this publication, in whole or in part, may be reproduced, copied, transferred or any other right reserved to its copyright owner, including photocopying and all other copying, any transfer or transmission using any network or other means of communication, any broadcast for distant learning, in any form or by any means such as any information storage, transmission or retrieval system, without prior written permission from Offensive Security.}
+}
+
+
+\begin{document}
+%---------------------------------------------------------------------------------
+%------------------------- Print title page --------------------------------------
+%---------------------------------------------------------------------------------
+\maketitle
+\thispagestyle{empty}
+%---------------------------------------------------------------------------------
+%------------------------- Print table of contents -------------------------------
+%---------------------------------------------------------------------------------
+% Attention: Document might need some runs to get all indexes etc right .. usual LaTeX stuff :)
+\tableofcontents
+\thispagestyle{empty}
+\pagebreak 
+
+%---------------------------------------------------------------------------------
+%------------------------- Declaring the empty variables for the hosts -----------
+%---------------------------------------------------------------------------------
+\newcommand{\hostname}{}
+\newcommand{\ip}{}
+\newcommand{\tcpports}{} 
+\newcommand{\udpports}{} 
+\newcommand{\os}{}
+\newcommand{\vuln}{}
+\newcommand{\product}{}
+\newcommand{\vulnx}{}
+\newcommand{\productx}{}
+\newcommand{\client}{\textit{kali (ZZ.ZZ.ZZ.ZZ)}}
+
+\section{Overview}
+\subsection{Introduction}
+This penetration test report contains all the steps %
+taken to successfully compromise machines in the Offensive Security Certified Professional (OSCP) exam environment; data such as proof of concepts (PoC), custom exploit code, and step-by-step documentation are included. The purpose of this report is to convey the student's %
+understanding of penetration testing methodologies as well as the technical knowledge required %
+to successfully achieve the Offensive Security Certified Professional (OSCP) certification.
+
+\textit{Note: This document serves as a template for the real report; it provides organized presentation so you can focus on pwning boxes. Please read the \href{https://support.offensive-security.com/oscp-exam-guide/}{OSCP Exam Guide} for the composition of your report. Good luck and try harder!}
+
+\subsection{High-Level Summary}
+\osid\ was tasked with performing an internal penetration test of the OSCP exam network. An internal penetration test is a simulated attack against %
+internally connected systems. The focus of this test is to perform attacks, similar to those of a malicious entity, and attempt to infiltrate Offensive Security’s internal %
+exam systems.
+
+\osid's overall objective was to find and exploit vulnerabilities while reporting the findings back to %
+Offensive Security. While conducting the internal penetration test, there were %
+several alarming vulnerabilities that were identified within the exam network. %
+
+\par \osid\ was able to gain administrative access to several machines due to vulnerable applications and poor security configurations. The potential for this access can be mitigated by doing stuff.
+
+\subsection{Technical Summary}
+\osid\ was tasked with penetration testing the following systems on the OSCP exam network:
+
+\begin{itemize}
+    \item XX.XX.XX.XX
+\end{itemize}
+
+Using the \client\ machine, \osid\ gained administrative access to several machines by exploiting their vulnerabilities. These machines and their vulnerabilities are listed below and further documented in later sections.
+
+%Define vulnerabilities below for referencing throughout the report
+%-----------------Vulnerabilities-------------------%
+\definevuln{\vulnPassword}{Weak User Password}
+% \definevulnf also adds a footnote with the 2nd parameter
+\definevulnf{\vulnCow}{Dirty Cow Privilege Escalation}{\url{https://dirtycow.ninja/}}
+%----------------------------------------------------%
+
+% Technical rundown of hosts and their vulnerabilities
+\begin{center}
+\begin{tabularx}{\textwidth}{|l|l|X|}
+    \hline
+    Hostname & IP & Vulnerability \\ 
+    \hline
+    \simpleref{example} & XX.XX.XX.XX &
+        \vulnPassword \newline
+        \vulnCow \\
+    \hline
+\end{tabularx}
+\end{center}
+
+%----------BOX_RUNDOWNS---------%
+\input{./hosts/example/host.tex}
+%-------------------------------%
+
+\appendix
+\input{./appendix/appendix.tex}
+\end{document}

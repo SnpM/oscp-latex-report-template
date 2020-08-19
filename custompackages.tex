@@ -1,0 +1,12 @@
+\catcode`\_=12
+\usepackage{fancyvrb}
+\newcommand{\footnoteref}[1]{\footnote{See footnote \ref{#1}.}}
+\newcommand{\fullhostname}{\textit{\hostname\ (\ip)}}
+\usepackage{tabularx}
+\newcommand{\simpleref}[1]{\hyperref[#1]{#1}}
+\newcommand{\definevuln}[2]{\DeclareRobustCommand{#1}{\textit{#2}}}
+\newcommand{\definevulnf}[3]{\DeclareRobustCommand{#1}{\textit{#2}\footnote{#3}}}
+
+\setlength{\parskip}{1em}
+
+%\usepackage[htt]{hyphenat} 
